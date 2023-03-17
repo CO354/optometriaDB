@@ -1,0 +1,64 @@
+<%- include('includes/header') %>
+<%- include('includes/navbar') %>
+
+<main role="main">
+    <section>
+        <div class="container">
+            <h1 class="pt-5">Venda de Áro</h1>
+
+            <form action="/receive/data/venda/aros" method="post" class="pt-3 formulario">
+                
+                <div class="row pt-5 mb-4">
+                    <div class="col-md-4 mb-3">
+                        <label for="quant">Quantidade:</label>
+                        <input id="quant" type="text" class="form-control" required placeholder="Quantidade*" name="quantidade_da_venda">
+
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="refAro">Referência do Aro: </label>
+                        <select id="refAro" class="form-control" required placeholder="Referência do Áro*" name="referencia_do_aro">
+                            <% stockaros.forEach((aro) => { %>
+                                <option value="<%=aro.modelo%>"><%=aro.modelo%></option>
+                        <% }) %>
+                       
+                        </select>
+                        
+                    </div>
+
+                    <div  class="col-md-4 mb-3">
+                        <label for="valor_stock">Confirmar a Referência do Áro</label>
+                        <select class="form-control" required placeholder="Confirmar Referência do Áro*" name="stockaroId">
+                            <% stockaros.forEach((aro) => { %>
+                                <option value="<%=aro.id%>"><%=aro.modelo%></option>
+                        <% }) %>
+                       
+                        </select>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label for="valor">Valor de Áro:</label>
+                        <select id="valor" class="form-control" required placeholder="Referência do Áro*" name="valor_total">
+                            <% stockaros.forEach((aro) => { %>
+                                <option><%=aro.valor%></option>
+                        <% }) %>
+                       
+                        </select>
+                    </div>
+
+                   
+
+
+                  
+                   
+
+                <div class="button-Send">
+                    <button class="btn btn-success" type="submit">Enviar</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+</main>
+
+
+<%- include('includes/footer') %>

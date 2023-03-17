@@ -1,0 +1,42 @@
+<%- include('includes/header') %>
+<%- include('includes/navbar') %>
+
+
+    <main role="main" class="mt-5 pt-5" >
+
+        <div class="contentOrgnizer">
+            <h1 class="my-4">Tabela de Venda de Aros</h1>
+
+            <table class="table table-bordered table-hovered tabela-striped tabela">
+                <thead>
+                   <tr>
+                    <th class="bg-info">Id</th>
+                    <th class="bg-warning">Quantidade</th>
+                    <th class="bg-success">Referência do Aro</th>
+                    <!-- <th class="bg-success">Identifição de Stock do Aro</th> -->
+                    <th class="table-info">Valor total</th>
+                   </tr>
+                    
+                </thead>
+                
+                <tbody>
+
+                    <% arosVendas.forEach((aro) => { %>
+                    <tr>
+                        <td> <%= aro.id %> </td>
+                        <td> <%= aro.quantidade_da_venda %> </td>
+                        <td> <%= aro.referencia_do_aro %></td>
+                        <!-- <td> <%= aro.stockaroId %></td> -->
+                        <td> <%= aro.valor_total %> </td>
+                    </tr>
+                    <% }) %>
+                   
+                </tbody>
+            </table>
+        
+
+
+    </main>
+
+
+<%- include('includes/footer') %>

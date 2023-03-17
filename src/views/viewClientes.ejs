@@ -1,0 +1,77 @@
+<%- include('includes/header') %>
+<%- include('includes/navbar') %>
+
+
+    <main role="main" class="mt-5 pt-5" >
+
+        <div class="contentOrgnizer">
+            <h1 class="my-4">Tabela de Clientes</h1>
+
+
+            <div id="clientes">AQUI FICA O TEXTO</div>
+
+        
+            
+            <table class="table table-bordered table-hovered tabela-striped tabela">
+                <thead>
+                   <tr>
+                    <th class="bg-info">Id</th>
+                    <th class="bg-warning">Série</th>
+                    <th class="bg-success">Nome</th>
+                    <th>Apelido</th>
+                    <th>Data de nascimento</th>
+                    <th>Idade</th>
+                    <th>Género</th>
+                    <th>Residencia</th>
+                    <th>Ocupação</th>
+                    <th>Contacto</th>
+                    <th>AV/SC</th>
+                    <th>Prescrição</th>
+                    <th>R/X</th>
+                    <th>Tipo de Tratamento</th>
+                    <th>Pagamento</th>
+                    <th>Acção</th>
+                   </tr>
+                    
+                </thead>
+                
+                <tbody>
+
+                 
+                    <% clientes.forEach((cliente) => { %>
+
+                    <tr>
+                       <td class="bg-info"><%= cliente.id %> </td>
+                       <td class="bg-warning"><%= cliente.serie %> </td>
+                       <td class="bg-success"><%= cliente.nome %> </td>
+                       <td><%= cliente.apelido %> </td>
+                       <td><%= cliente.data_de_nascimento %> </td>
+                       <td><%= cliente.idade %> </td>
+                       <td><%= cliente.genero %> </td>
+                       <td><%= cliente.residencia %> </td>
+                       <td><%= cliente.ocupacao %> </td>
+                       <td><%= cliente.contacto %> </td>
+                       <td><%= cliente.av_sc %> </td>
+                       <td><%= cliente.prescricao %> </td>
+                       <td><%= cliente.r_x %> </td>
+                       <td><%= cliente.tipo_de_tratamento %> </td>
+                       <td><%= cliente.pagamento %> </td>
+                       <td><a href="/editar/dados/cliente/<%=cliente.id %>" class="btn btn-info">Editar</a></td>
+
+                            
+                       
+                    </tr>
+                    <%  }) %> 
+
+                   
+                </tbody>
+            </table>
+
+              
+
+
+
+
+    </main>
+
+<%- include('includes/footer') %>

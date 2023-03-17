@@ -1,0 +1,44 @@
+<%- include('includes/header') %>
+<%- include('includes/navbar') %>
+
+
+    <main role="main" class="mt-5 pt-5" >
+
+        <div class="contentOrgnizer">
+            <h1 class="my-4">Stock de Lentes</h1>
+
+            <table class="table table-bordered table-hovered tabela-striped tabela">
+                <thead>
+                   <tr>
+                    <th class="bg-info">Id</th>
+                    <th class="bg-warning">Graduação</th>
+                    <th class="bg-success">Modelo</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                   </tr>
+                    
+                </thead>
+                
+                <tbody>
+
+                    <%  lentes.forEach((lente) => { %>
+                    <tr>
+                      <td> <%= lente.id %></td>
+                      <td> <%= lente.graduacao %></td>
+                      <td> <%= lente.modelo %></td>
+                      <td> <%= lente.quantidade %></td>
+                      <td> <%= lente.valor %></td>
+                    </tr>
+                    <%  }) %>
+             
+
+                   
+                </tbody>
+            </table>
+        
+
+
+    </main>
+
+
+<%- include('includes/footer') %>

@@ -1,0 +1,91 @@
+<%- include('includes/header') %>
+<%- include('includes/navbar') %>
+
+<main role="main">
+    <section>
+        <div class="container">
+            <h1 class="pt-5">Editar Dados do Cliente</h1>
+
+            <form action="/data/cliente/updated" method="post" class="pt-3 formulario">
+                
+                <div class="row pt-5 mb-4">
+                    <div class="col-md-4 mb-3">
+                        <input type="hidden" name="id" class="form-control" value="<%= cliente.id %>">
+                        <input type="text" class="form-control" placeholder="Série" value="<%= cliente.serie %>"  name="serie">
+
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" placeholder="Nome" value="<%= cliente.nome %>" name="nome">
+                        
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" placeholder="Apelido" value="<%= cliente.apelido %>" name="apelido">
+                        
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <input type="date" class="form-control" placeholder="Data de Nascimento" value="<%= cliente.data_de_nascimento %>" name="data_de_nascimento" required>
+                        
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" placeholder="Idade" value="<%= cliente.idade %>"    name="idade">
+                        
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <select class="form-control" aria-placeholder="escolha"  name="genero" id="">
+                            <option disabled value="Escolha">Escolha</option>
+                            <option value="Masculino" >Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                        </select>
+                        
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" placeholder="Residência" value="<%= cliente.residencia %>"  name="residencia">
+                        
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" placeholder="Ocupação" value="<%= cliente.ocupacao %>"  name="ocupacao" >
+                        
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="text"  class="form-control" placeholder="Contacto" value="<%= cliente.contacto %>"  name="contacto">
+                        
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control"  placeholder="AV/SC" value="<%= cliente.av_sc %>"  name="av_sc">
+                        
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" placeholder="Prescrição" value="<%= cliente.prescricao %>" name="prescricao">
+                        
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" placeholder="R.X" value="<%= cliente.r_x %>" name="r_x">
+                        
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" placeholder="Tipo de Tratamento" value="<%= cliente.tipo_de_tratamento %>" name="tipo_de_tratamento">
+                        
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" placeholder="Pagamento" value="<%= cliente.pagamento %>" name="pagamento">
+                        
+                    </div>
+                </div>
+
+                <div class="button-Send">
+                    <button class="btn btn-success" type="submit">Salvar</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+</main>
+
+
+<%- include('includes/footer') %>

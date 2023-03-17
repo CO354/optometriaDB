@@ -1,0 +1,48 @@
+<%- include('includes/header') %>
+<%- include('includes/navbar') %>
+
+<main role="main">
+    <section>
+        <div class="container">
+            <h1 class="pt-5">Cadastrar Stock de Áros</h1>
+
+            <form action="/receive/data/aros" method="post" class="pt-3 formulario">
+                
+                <div class="row pt-5 mb-4">
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" name="serie" placeholder="Serie*" required>
+
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" name="modelo" placeholder="Modelo*" required>
+                        
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" name="tipo_de_aro" placeholder="Tipo de Aro*" required>
+                        
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" name="quantidade" placeholder="Quantidade*" required>
+                        
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" name="valor" placeholder="Valor*" required>
+                        
+                    </div>
+        
+
+                  
+
+                <div class="button-Send">
+                    <button class="btn btn-success" type="submit">Cadastrar</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+</main>
+
+
+<%- include('includes/footer') %>

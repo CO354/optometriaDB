@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+
+body {
+    background-color: rgb(216, 217, 217);
+    height: 100%;
+    overflow-x: scroll;  
+}
+
+
+main{
+    height: 100%;
+    
+}
+
+
+.organizeLinks {
+    margin-top: 4em;
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    margin-left: 5em;
+}
+
+.organizeLinks a {
+    text-decoration: none;
+    font-size: 18px;
+    background-color: rgb(13, 14, 14);
+    padding: 4rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fcf9f9;
+    border-radius: 1em;
+    transition: .8s;
+}
+
+.organizeLinks a:hover{
+    color: rgb(6, 139, 216);
+    background-image: linear-gradient(90deg, rgb(28, 29, 27), rgb(2, 31, 32));
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, .5);
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+
+.contentOrgnizer{
+    margin-left: 5em;
+}
+
+.formulario input[type=text] {
+    font-size: 18px;
+    padding: 1.2em;
+    border: none;
+}
+
+.formulario select {
+    padding: 1.2em;
+    border: none;
+    cursor: pointer;
+}
+
+.formulario input[type=number] {
+    font-size: 18px;
+    padding: 1.2em;
+    border: none;
+}
+
+.formulario input[type=date] {
+    font-size: 18px;
+    padding: 1.2em;
+    border: none;
+}
+
+.formulario button {
+    padding: .5em 2em;
+    color: white;
+    font-size: 18px;
+}
+
+
+.tabela{
+
+  width: 1620px;
+}
